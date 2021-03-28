@@ -1,0 +1,210 @@
+2021-03-28 (XM)
+- Added bitfiles folder to project and build specification
+
+2021-03-19 (XM)
+- project cleanup
+- check for existing file when saving Display image
+- changed minimum windows size so that the iamge is 512x256 pixel
+
+2021-03-08 (XM)
+- Added Image Context menu (Palette, Copy, Save, Zoom)
+
+2021-03-01 (XM)
+- upgraded Beep to System Sound
+
+2021-02-28 (XM)
+- Fixed (hopefully) problem with ghost saving task after FPGA timeout
+- Added Beep to End of Recording and End of Saving tasks
+
+2021-02-27 (XM)
+- Fixed Dataset Series Image Display
+- Added Image Binning Options and renamed Image Information to Image ROI Information
+- v 0.4 of the dataset file format
+- moved file back to SwissSPAD
+- fixed a couple of bugs
+
+2021-02-26 (XM)
+- debugging of cropping
+- debugging of buffer size
+- Added Compression option in File Information
+
+2021-02-25 (XM)
+- Added ROI change >> update Image Information in Settings
+- Added separate Buffer Size (# Gates) parameter in DAQ Settings to try and fight USB transfer failures
+- Fixed Image Information UI bug
+
+2021-02-24 (XM)
+- Added option to save only part of the image
+- Version 0.3.1 of the image file format adding this image information
+
+2021-02-13 (XM)
+- cosmetic edits
+- reverted to "Preallocated clone reentrant execution" for data saving tasks
+- added some timeout error indicator in Download Data
+- outputs a message to the Notebook when the recording task is complete
+- further error indicators
+- avoid reloading the bitfile if unchanged
+- terminates saving task if FPGA readout error
+- Added wait corresponding to gate image integration
+
+2021-02-12 (XM)
+- Code cleanup
+- Corrected a bug in the FPGA parameters for intensity
+- Corrected a different bug in the FPGA parameters for gating
+
+2021-02-11 (XM)
+- Changed buffer size to 8-bit gate image size
+- Fixed a problem with Live imaging with gated bitfile
+- Implemented granular data download
+- Minor cosmetic changes
+
+2021-02-10 (XM)
+- Changed to GetFileSize function
+- Cosmetic update to FPGA parameters
+
+2021-01-30 (XM)
+- Added Abort Saving Tasks shortcut menu to the blinking LED
+- Fixed a bug in end of file saving task
+- Fixed a bug in parameter passing to 2019 firmware
+- Added SS2 DAQ Parameters to Notebook output, which is now the Metadata as well
+- Added Timing information in FPGA download
+
+2021-01-29 (XM)
+- Added File Saving Task information
+- Added LED with corresponding tasks description in Context Help
+
+2021-01-28 (XM)
+- Started to add check on on-going file saving tasks
+- Corrected bug that did not allow a series of acquisition to complete
+
+2021-01-13 (XM)
+- removed Gate Shift data entry limitations
+
+2021-01-12 (XM)
+- corrected Start up message
+- check for existing files
+- changed Q name to avoid name collision when saving several files
+- added end of file saving message
+- changed priority/thread and reentrancy of some VIs
+
+2021-01-04 (XM)
+- Added separate case for live intensity mode
+
+2020-12-28 (XM)
+- Debugged live acq and recording with 05-07-2019 bitfile
+
+2020-12-27 (XM)
+- removed Accumulate option in File Settings
+- Implemented preliminary support for ss2_top_05_07_2019.bit bitfile
+
+2020-12-25 (XM)
+- Added "# Datasets in Series" and "Dataset ID in Series" information in HDF5 file when appropriate
+- Implemented parallel save architecture for multiple datasets
+- Fixed a few bugs
+
+2020-12-24 (XM)
+- Added File Series Number and Accumulate option in File Settings
+- Implemented Series Acquisition
+- Debugged. Had to add a wait before respawning the Data Saving Task
+
+2020-12-23 (XM)
+- VIs renamed
+- Starting to implement July 2019 firmware
+- Removed a series of bogus dependencies
+- First Source Distribution Release
+
+2020-12-21 (XM)
+- Fixed a bug on 10-bit data recording
+- Added valid gate definition check before Live Acquisition & Recording
+
+2020-12-20 (XM)
+- Added Admin Mode to prevent Gate Configuration Settings modification
+- Storage of Gate Configurations as VI Tag
+- Fixed Display Image accumulation during recording
+- Corrected a bug that was never resetting image when recording 10-bit data
+
+2020-12-19 (XM)
+- Adding Gate Image Type to the File Description
+
+2020-12-19 (XM)
+- Added HDF5 data compression
+- Added more Gate Characteristics ouput in Settings Wndow (and Notebook)
+
+2020-12-15 (XM)
+- Fixed .NET constructor error by calling it only once per session
+
+2020-12-14 (XM)
+- Debugged Saved Gate Configurations
+- Change Histogram Q to [[SGL]]
+
+2020-12-13 (XM)
+- Added GUI to handle Saved Gate Configurations: TBD
+
+2020-12-12 (XM)
+- Compute Gate Width from FPGA parameters
+- adjusts FPGA parameters to bifile version
+- Debugged data recording
+- Added Notebook output for recording
+
+2020-12-07 (XM)
+- Added Bitfile Version string to Settings
+- Data to HDF5 first code
+
+2020-12-06 (XM)
+- Added template for HDF5 data saving
+- HDF5 Header
+
+2020-12-02 (XM)
+- Added some code for HDF5 File Creation (TBC)
+
+2020-12-01 (XM)
+- Code update
+- Reduced number of subVIs
+- Debugged Recording (but problem with Histogram)
+
+2020-11-30 (XM)
+- Refactored Live Acquisition
+- Added Record button and template for muliple image acquisition
+- Implemented Multiple Datasets Recording
+- Minor code fixes
+- Started debugging Recording
+
+2020-11-29 (XM)
+- Update of Settings on Initialization
+- Added DAQ Parameters to Settings
+- Message update during acquisition
+- Minor cosmetic updates
+
+2020-11-28 (XM)
+- Added # Histogram Bins to Settings
+- Fixed single element queue behavior
+- Refactoring
+- Added verbose error messages
+- Added Save-Load Settings
+- Added Notebook entry at startup and close
+- Fixed a few bugs
+
+2020-11-27 (XM)
+- Settings, About, Notebook & Histogram Windows
+
+2020-11-15 (XM)
+- Conversion of SS2 DAQ parameters to FPGA parameters
+
+2019-07-16 (XM)
+- Added "Application Instance Close" event case
+
+2019-07-14 (XM)
+- Added menu: Quit and Select bitfile...
+- Handling of FPGA communication shutdown
+- Made compatible with standalone release
+
+2019-07-01 (XM)
+- Fixed a bug in parameter initialization
+- Minor code clean up
+- Debugging iImage passing from .NET
+
+2019-06-30 (XM)
+- Completed code, tested unsuccessfully on SS2...
+
+2019-06-29 (XM)
+- Started implementing SS2 Live
