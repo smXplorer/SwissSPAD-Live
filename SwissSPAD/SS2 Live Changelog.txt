@@ -1,7 +1,13 @@
+2021-03-31 (XM)
+- version 0.3.1
+- Added Clear Internal Variables upon quitting
+- Set Busy Icon status to inactive
+
 2021-03-30 (XM)
 - Fixed repeated 'Tada' sound
 - Cosmetic changes to Front Panel objects
 - Clear internal variables when quitting
+- Version 0.3 of the distribution released
 
 2021-03-28 (XM)
 - Added bitfiles folder to project and build specification
