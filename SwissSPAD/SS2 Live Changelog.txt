@@ -1,3 +1,23 @@
+2021-04-04 (XM)
+- Fixed handling of Admin-protected Gate Definitions
+- Debugged Gate Definition UI
+- v0.3.3
+
+2021-04-03 (XM)
+- Added Notebook warning when data was scrambled during transfer
+
+2021-04-02 (XM)
+- Added deallocate memory flag in Save VI (no apparent effect)
+
+2021-04-01 (XM)
+- Added "Stop Data Recording" dialog before aborting saving tasks
+- Clear Saving in Progress indicator after aborting
+- Modified default configurations to have zero offset
+- Histogram binning now uses the dataset bitness to set the bin size
+- Added Help >> FPGA Status
+- Fixed missing saved gates if the number of gates is not a multiple of the buffer size
+- version 0.3.2
+
 2021-03-31 (XM)
 - version 0.3.1
 - Added Clear Internal Variables upon quitting

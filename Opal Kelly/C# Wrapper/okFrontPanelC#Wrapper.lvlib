@@ -5,6 +5,8 @@
 	<Property Name="NI.Lib.Version" Type="Str">1.0.0.0</Property>
 	<Property Name="NI.LV.All.SourceOnly" Type="Bool">true</Property>
 	<Item Name="Ctls" Type="Folder">
+		<Item Name="okDeviceSensor.ctl" Type="VI" URL="../okDeviceSensor.ctl"/>
+		<Item Name="okDeviceSensorType.ctl" Type="VI" URL="../okDeviceSensorType.ctl"/>
 		<Item Name="okEDeviceInterface.ctl" Type="VI" URL="../okEDeviceInterface.ctl"/>
 		<Item Name="okEUSBSpeed.ctl" Type="VI" URL="../okEUSBSpeed.ctl"/>
 		<Item Name="okFP Error Codes.ctl" Type="VI" URL="../okFP Error Codes.ctl"/>
@@ -18,6 +20,7 @@
 	<Item Name="Methods" Type="Folder">
 		<Item Name="okCFrontPanel Activate Trigger In.vi" Type="VI" URL="../okCFrontPanel Activate Trigger In.vi"/>
 		<Item Name="okCFrontPanel Configure FPGA.vi" Type="VI" URL="../okCFrontPanel Configure FPGA.vi"/>
+		<Item Name="okCFrontPanel Get Device Sensors.vi" Type="VI" URL="../okCFrontPanel Get Device Sensors.vi"/>
 		<Item Name="okCFrontPanel Read From Block Pipe Out.vi" Type="VI" URL="../okCFrontPanel Read From Block Pipe Out.vi"/>
 		<Item Name="okCFrontPanel Set Wire In Value.vi" Type="VI" URL="../okCFrontPanel Set Wire In Value.vi"/>
 		<Item Name="okCFrontPanel Update Wire Ins.vi" Type="VI" URL="../okCFrontPanel Update Wire Ins.vi"/>
@@ -27,10 +30,17 @@
 		<Item Name="okCFrontPanelDevices Destroy Device Refnum.vi" Type="VI" URL="../okCFrontPanelDevices Destroy Device Refnum.vi"/>
 		<Item Name="okCFrontPanelDevices Dispose.vi" Type="VI" URL="../okCFrontPanelDevices Dispose.vi"/>
 		<Item Name="okCFrontPanelDevices Get Count.vi" Type="VI" URL="../okCFrontPanelDevices Get Count.vi"/>
+		<Item Name="okCFrontPanelDevices Get Device &amp; Sensors Info.vi" Type="VI" URL="../okCFrontPanelDevices Get Device &amp; Sensors Info.vi"/>
+		<Item Name="okCFrontPanelDevices Get Device Info.vi" Type="VI" URL="../okCFrontPanelDevices Get Device Info.vi"/>
 		<Item Name="okCFrontPanelDevices Get Device Refnum.vi" Type="VI" URL="../okCFrontPanelDevices Get Device Refnum.vi"/>
 		<Item Name="okCFrontPanelDevices Get Device Serial Number.vi" Type="VI" URL="../okCFrontPanelDevices Get Device Serial Number.vi"/>
+		<Item Name="okCFrontPanelDevices Get Flash Memory Layout.vi" Type="VI" URL="../okCFrontPanelDevices Get Flash Memory Layout.vi"/>
 	</Item>
-	<Item Name="okDeviceSensors" Type="Folder"/>
+	<Item Name="okDeviceSensors" Type="Folder">
+		<Item Name="okCFrontPanel Dispose Device Sensors.vi" Type="VI" URL="../okCFrontPanel Dispose Device Sensors.vi"/>
+		<Item Name="okDeviceSensors Get Sensor.vi" Type="VI" URL="../okDeviceSensors Get Sensor.vi"/>
+		<Item Name="okDeviceSensors Get Sensors Count.vi" Type="VI" URL="../okDeviceSensors Get Sensors Count.vi"/>
+	</Item>
 	<Item Name="okDeviceSettings" Type="Folder"/>
 	<Item Name="Utils" Type="Folder">
 		<Item Name="okFP Convert Error Code.vi" Type="VI" URL="../okFP Convert Error Code.vi"/>
