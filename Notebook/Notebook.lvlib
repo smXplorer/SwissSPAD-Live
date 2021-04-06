@@ -21,6 +21,7 @@
 	</Item>
 	<Item Name="Public" Type="Folder">
 		<Property Name="NI.LibItem.Scope" Type="Int">1</Property>
+		<Item Name="Check Notebook Status Before Quitting App.vi" Type="VI" URL="../Check Notebook Status Before Quitting App.vi"/>
 		<Item Name="Delete Notebook Backup on Quit.vi" Type="VI" URL="../Delete Notebook Backup on Quit.vi"/>
 		<Item Name="Get Notebook Queue.vi" Type="VI" URL="../Get Notebook Queue.vi"/>
 		<Item Name="Notebook Action List.ctl" Type="VI" URL="../Notebook Action List.ctl"/>

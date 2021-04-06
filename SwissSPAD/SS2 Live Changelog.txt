@@ -1,3 +1,15 @@
+2021-04-06 (XM)
+- Fixed a bug in data scrambling test
+- v0.3.4
+- Open Notebook on startup, check for Notebook status on quit
+- Fixing "Abort All Saving Tasks" action
+- Added 'Reset FGPA' Help menu item
+- v0.4
+ 
+2021-04-05 (XM)
+- Moved data scrambling test to decoding in order to catch that before binning/cropping
+- Force release queues
+
 2021-04-04 (XM)
 - Fixed handling of Admin-protected Gate Definitions
 - Debugged Gate Definition UI
