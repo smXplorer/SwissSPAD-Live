@@ -16,6 +16,7 @@
 	</Item>
 	<Item Name="DLLs" Type="Folder">
 		<Item Name="libFrontPanel-csharp.dll" Type="Document" URL="../libFrontPanel-csharp.dll"/>
+		<Item Name="libFrontPanel-pinv.dll" Type="Document" URL="../libFrontPanel-pinv.dll"/>
 	</Item>
 	<Item Name="Methods" Type="Folder">
 		<Item Name="okCFrontPanel Activate Trigger In.vi" Type="VI" URL="../okCFrontPanel Activate Trigger In.vi"/>
