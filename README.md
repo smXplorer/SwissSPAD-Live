@@ -14,11 +14,11 @@ This software allows data acquisition, visualization and saving with the SwissSP
 
 * Online Manual
 
-An online manual (including a PDF version) can be found at [https://ss2-live-manual.readthedocs.io/](https://ss2-live-manual.readthedocs.io/)
+An online manual (including a PDF version) can be found at [https://swissspad-live-distribution.readthedocs.io/(https://swissspad-live-distribution.readthedocs.io/)
 
 ### How do I get set up? ###
 
-Instructions for installing this software can be found at [https://ss2-live-manual.readthedocs.io/en/latest/installation.html](https://ss2-live-manual.readthedocs.io/en/latest/installation.html)
+Instructions for installing this software can be found at [https://swissspad-live-distribution.readthedocs.io/en/latest/installation.html](https://swissspad-live-distribution.readthedocs.io/en/latest/installation.html)
 
 ### Contribution guidelines ###
 
@@ -47,3 +47,5 @@ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTH
 WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ---
+
+Other licenses can be found in the Licenses folder.
