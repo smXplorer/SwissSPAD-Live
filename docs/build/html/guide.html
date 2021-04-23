@@ -1,0 +1,356 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>User Guide &mdash; SwissSPAD Live 0.4 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Version History" href="versionhistory.html" />
+    <link rel="prev" title="Windows" href="windows.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> SwissSPAD Live
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.4
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="windows.html">Windows</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">User Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#live-mode">Live Mode</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#overview">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#details">Details</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#recording-mode">Recording Mode</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id4">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id5">Details</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#setting-acquisition-parameters">Setting Acquisition Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#opening-hdf5-files">Opening HDF5 Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#troubleshooting">Troubleshooting</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#manual-issues">Manual issues</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#software-issues">Software issues</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#common-problems">Common problems</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#live-acquisition-or-data-recording-does-not-work-anymore">Live acquisition or Data recording does not work anymore</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#there-was-a-warning-after-a-recording-completed">There was a warning after a recording completed</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#data-saving-is-stuck">Data saving is stuck</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#images-are-all-black">Images are all black</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="versionhistory.html">Version History</a></li>
+<li class="toctree-l1"><a class="reference internal" href="support.html">Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="acknowledgments.html">Acknowledgments</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">SwissSPAD Live</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>User Guide</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/guide.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="user-guide">
+<span id="id1"></span><h1>User Guide<a class="headerlink" href="#user-guide" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="live-mode">
+<span id="id2"></span><h2>Live Mode<a class="headerlink" href="#live-mode" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="overview">
+<h3>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">Live</span> <span class="pre">Mode</span></code> is intended for rapid acquisition of full-frame images for alignment purpose or to check the signal level.</p>
+<p>In this mode, the following parameters defined in the <code class="docutils literal notranslate"><span class="pre">Acquisition</span> <span class="pre">Parameters</span></code> tab of the <code class="docutils literal notranslate"><span class="pre">Settings</span></code> window are ignored and replaced by the following values:</p>
+<ul class="simple">
+<li><p>10 bits: FALSE</p></li>
+<li><p># Sets: 1</p></li>
+</ul>
+<p>If the bitfile is an ‘intensity’ one, of course all gate definition parameters (<code class="docutils literal notranslate"><span class="pre">Gate</span> <span class="pre">Offset</span></code>, <code class="docutils literal notranslate"><span class="pre">gs_psincdec_n</span></code> and <code class="docutils literal notranslate"><span class="pre">gs_no_shift_adj</span></code>) are also ignored.</p>
+</div>
+<div class="section" id="details">
+<h3>Details<a class="headerlink" href="#details" title="Permalink to this headline">¶</a></h3>
+<p>To start a Live Acquisition, simply click the <code class="docutils literal notranslate"><span class="pre">Start</span></code> button (bottom right).</p>
+<p>During Live Acquisition, a ‘busy’ icon is displayed next to the Record button.</p>
+<p>To stop a Live Acquisition, click on the same button (now labeled <code class="docutils literal notranslate"><span class="pre">Stop</span></code>).</p>
+<p>While you will be warned to do so, remember to stop a Live Acquisition before starting a Recording (or quitting).</p>
+</div>
+</div>
+<div class="section" id="recording-mode">
+<span id="id3"></span><h2>Recording Mode<a class="headerlink" href="#recording-mode" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id4">
+<h3>Overview<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<p>To start recording, click on the <code class="docutils literal notranslate"><span class="pre">Record</span></code> button (to the right of the <code class="docutils literal notranslate"><span class="pre">Start</span></code> button).</p>
+<p>During recording, a ‘busy’ icon is displayed next to the Record button.</p>
+<p>In addition, a <code class="docutils literal notranslate"><span class="pre">Saving</span> <span class="pre">in</span> <span class="pre">progress</span></code> LED is turned on, indicating that data is being saved in the background. Hovering over this LED with the mouse will display information on the on-going saving task(s) in the Context Help window: <code class="docutils literal notranslate"><span class="pre">File</span> <span class="pre">Name:</span> <span class="pre">current/total</span> <span class="pre">Images,</span> <span class="pre">File</span> <span class="pre">Size</span> <span class="pre">in</span> <span class="pre">MB</span></code>. Checking this information is useful to monitor the progress of data saving, but also to detect a potential FPGA communication problem, e.g. if one of the files is stuck at 0 image.</p>
+<p>The acquisition can be aborted by clicking on the same button, now labeled <code class="docutils literal notranslate"><span class="pre">Abort</span></code>.</p>
+<p>Data saving can be interrupted by right-clicking on the <code class="docutils literal notranslate"><span class="pre">Saving</span> <span class="pre">in</span> <span class="pre">progress</span></code> LED and selecting <code class="docutils literal notranslate"><span class="pre">Abort</span> <span class="pre">All</span> <span class="pre">Saving</span> <span class="pre">Tasks</span></code>.</p>
+</div>
+<div class="section" id="id5">
+<h3>Details<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<p>A recording consists in the acquisition of a user-specified number <code class="docutils literal notranslate"><span class="pre">S</span></code> (default: 1) of gate sets (parameter <code class="docutils literal notranslate"><span class="pre">#</span> <span class="pre">Sets</span></code> in the <a class="reference internal" href="windows.html#acquisition-parameters-tab"><span class="std std-ref">Acquisition Parameters</span></a> tab of the Settings window), each set comprising a user-specified number <code class="docutils literal notranslate"><span class="pre">g</span></code> of gates (parameter <code class="docutils literal notranslate"><span class="pre">#</span> <span class="pre">Gates</span> <span class="pre">per</span> <span class="pre">Set</span></code>).</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">G</span> <span class="pre">=</span> <span class="pre">S</span> <span class="pre">x</span> <span class="pre">g</span></code> gates are shifted with respect to one another by <code class="docutils literal notranslate"><span class="pre">Gate</span> <span class="pre">Shift</span></code> increments of <code class="docutils literal notranslate"><span class="pre">dt</span> <span class="pre">=</span> <span class="pre">1/56</span> <span class="pre">ns</span></code> (<em>i.e</em> 17.8571 ps), the first gate starting at an offset specified by <code class="docutils literal notranslate"><span class="pre">Gate</span> <span class="pre">Offset</span></code> (in 1/56 ns units). The complete series of gates thus covers a span of <code class="docutils literal notranslate"><span class="pre">G</span> <span class="pre">x</span> <span class="pre">dt</span></code> reported as <code class="docutils literal notranslate"><span class="pre">Gate</span> <span class="pre">Images</span> <span class="pre">Span</span></code> in the <a class="reference internal" href="windows.html#acquisition-parameters-tab"><span class="std std-ref">Acquisition Parameters</span></a> tab of the Settings window.</p>
+<p>The data stored on the FPGA is continuously transfered to the PC, decoded and saved in parallel, which can result in the data acquisition being over well before the data is fully saved. This is why three different completion messages are printed in the Notebook:</p>
+<ul class="simple">
+<li><p>a data transfer completion message</p></li>
+<li><p>a data decoding completion message</p></li>
+<li><p>a data file saving completion message</p></li>
+</ul>
+<p>A new data recording can be started as soon as the previous one is completed, even if the corresponing data saving task is still on-going. For this reason, it is important to check the status of the LED on the main window, as data saving can significantly lag behind data acquisition (i.e. do not quit until all your data is saved!). Note that not checking the <code class="docutils literal notranslate"><span class="pre">Compression</span></code> checkbox in the <a class="reference internal" href="windows.html#file-information-tab"><span class="std std-ref">File Information</span></a> tab of the Settings window may speed up data saving, at the expense of significantly larger files (5x or more).</p>
+</div>
+</div>
+<div class="section" id="setting-acquisition-parameters">
+<span id="id6"></span><h2>Setting Acquisition Parameters<a class="headerlink" href="#setting-acquisition-parameters" title="Permalink to this headline">¶</a></h2>
+<p>Besides the gate definitions parameters discussed above, the following parameters can be modified:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">10</span> <span class="pre">bits</span></code>: by default, data is stored as the sum of 255 1-bit images. When checking this checkbox, 4 such images are acquired and transfered to the PC, and accumulated before saving (or displaying) the data. The maximum pixel value is therefore 1,020. Data acquisition takes 4 times longer than for an 8-bit image.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">#</span> <span class="pre">Exposure</span> <span class="pre">Sequences</span></code>: this parameter specifies during how many laser periods the gare is opened and closed for each 1-bit gate image. Adjust this parameter by checking the <a class="reference internal" href="windows.html#histogram-window"><span class="std std-ref">Histogram Window</span></a> and trying to make sure the largest value stays away from the maximum (either 255 or 1,020) to avoid saturation. Large values (&gt; 100) also result in readout artifacts and should be avoided.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Laser</span> <span class="pre">Period</span></code>: this information is saved in the file for the user’s convenience but has no impact on acquisition.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Buffer</span> <span class="pre">Size</span> <span class="pre">(#</span> <span class="pre">Gates)</span></code>: this parameter controls the size of FPGA memory that is transfered as a block to the PC. Too large a value will result in long transfer times and might end up in the FPGA FIFO overfilling while transfer of the previous block ends.</p></li>
+</ul>
+<p>Too small a value may result in the FIFO overfilling because of a MS Windows interrupt preventing it to be emptied on time. This can result in two different types of symptoms:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>The acquisition is interrupted after a 10 s pause, and results in an error message (in red) in the Notebook. See <a class="reference internal" href="#troubleshooting"><span class="std std-ref">Troubleshooting</span></a> for further details.</p></li>
+<li><p>The acquisition is not interrupted, but a warning message in red is displayed in the Notebook, according to which data has been scrambled during transfer. See <a class="reference internal" href="#troubleshooting"><span class="std std-ref">Troubleshooting</span></a> for further details.</p></li>
+</ul>
+</div></blockquote>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Preset</span> <span class="pre">Configuration</span></code>: This pull-dowm menu gives access to 7 preset gate parameters configurations tested by EPFL. The parameters set by these configurations are the 4 <code class="docutils literal notranslate"><span class="pre">gs_psincdec</span></code> and the 3 <code class="docutils literal notranslate"><span class="pre">gs_no_shift_adj</span></code> parameters, whose definition can be found in Arin Ulku’s Ph D thesis. In a nutshell, they define the gate size, which is reported in the <code class="docutils literal notranslate"><span class="pre">Predicted</span> <span class="pre">Gate</span> <span class="pre">Width</span></code> below. These parameters cannot be modified by the user (see <a class="reference internal" href="#gate-configuration-admin"><span class="std std-ref">note</span></a> below).</p></li>
+</ul>
+<p>Note that the <code class="docutils literal notranslate"><span class="pre">Gate</span> <span class="pre">Offset</span></code> parameter for these preset configurations is set to zero, but can be changed by the user. In that case, the preset configuration changes to <code class="docutils literal notranslate"><span class="pre">User-defined</span> <span class="pre">configuration</span></code>. To store such a choice (gate configuration + offset) for future use, right-click the pull-down menu and select among the different menu options.</p>
+<p>A good starting value is 20, depending on PC performance (reducing the number of active or background processes such as Wimdows Telemetry, File Indexing, etc., may help with performance).</p>
+<p id="gate-configuration-admin"><strong>Note</strong>: If needed, it is possible to modify the protected gate configuration parameters in ‘Admin’ mode, turned on in the <a class="reference internal" href="windows.html#about-window"><span class="std std-ref">About Window</span></a>.</p>
+</div>
+<div class="section" id="opening-hdf5-files">
+<span id="id7"></span><h2>Opening HDF5 Files<a class="headerlink" href="#opening-hdf5-files" title="Permalink to this headline">¶</a></h2>
+<p>The HDF5 format in which series of gate images are saved is described on the AlliGator software website:</p>
+<p><a class="reference external" href="https://sites.google.com/a/g.ucla.edu/alligator/alligator-technical-reference/alligator-hdf5-file-format">https://sites.google.com/a/g.ucla.edu/alligator/alligator-technical-reference/alligator-hdf5-file-format</a></p>
+<p>AlliGator can be used to open and analyze HDF5 files saved by SwissSPAD Live.</p>
+</div>
+<div class="section" id="troubleshooting">
+<span id="id8"></span><h2>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="manual-issues">
+<span id="troubleshooting-manual"></span><h3>Manual issues<a class="headerlink" href="#manual-issues" title="Permalink to this headline">¶</a></h3>
+<p>If you find issues with this manual (typo, error, obscurity, etc.) or have suggestions for its improvement, please create an issue on the <code class="docutils literal notranslate"><span class="pre">SS2</span> <span class="pre">Live</span> <span class="pre">Manual</span></code> Bibucket repository at <a class="reference external" href="https://bitbucket.org/smXplorer/ss2-live-manual/issues?status=new&amp;status=open">https://bitbucket.org/smXplorer/ss2-live-manual/issues?status=new&amp;status=open</a>.</p>
+</div>
+<div class="section" id="software-issues">
+<span id="troubleshooting-software"></span><h3>Software issues<a class="headerlink" href="#software-issues" title="Permalink to this headline">¶</a></h3>
+<p>If you find issues with the software itself (persistent error, bug, etc.) or want to suggest features for future releases, please join the <code class="docutils literal notranslate"><span class="pre">SwissSPAD</span> <span class="pre">Live</span> <span class="pre">Support</span></code> Google Group at <a class="reference external" href="https://groups.google.com/g/swissspad-live-support">https://groups.google.com/g/swissspad-live-support</a>.</p>
+</div>
+<div class="section" id="common-problems">
+<span id="troubleshooting-problems"></span><h3>Common problems<a class="headerlink" href="#common-problems" title="Permalink to this headline">¶</a></h3>
+<p>The following is a list of common issues that may be encountered and possible workarounds.</p>
+<p><strong>Important Note: don’t forget to open the Notebook! Oftentimes, there is a lot of information printed there (in red) about errors, which might sometimes help diagnose the source of the problem.</strong></p>
+<div class="section" id="live-acquisition-or-data-recording-does-not-work-anymore">
+<h4>Live acquisition or Data recording does not work anymore<a class="headerlink" href="#live-acquisition-or-data-recording-does-not-work-anymore" title="Permalink to this headline">¶</a></h4>
+<ol class="arabic simple">
+<li><p>When the FPGA FIFO overfills, the FPGA sometimes enters into an unrecoverable state and times out after 10 s, resulting in a corresponding error code sent to the Notebook. To recover from this situation use the <code class="docutils literal notranslate"><span class="pre">Help</span> <span class="pre">&gt;&gt;</span> <span class="pre">Reset</span> <span class="pre">FPGA</span></code> menu item.</p></li>
+<li><p>It might in some cases be necessary to stop SwissSPAD Live and restart it. If that still does not solve the issue, quitting and restarting LabVIEW might be necessary.</p></li>
+<li><p>Finally, occasionally the following steps may still not be sufficient to re-establish communication with the FPGA, necessitating a reboot of the FPGA. To do this, first stop SwissSPAD Live and simply unplug and then immediately plug back the FPGA power supply from its wall socket.</p></li>
+</ol>
+<p>Note that in order to not lose the information stored in the Notebook, it is a recommended to save it before quitting SwissSPAD Live and LabVIEW. Then, immediately after restarting SwissSPAD Live, reopen that saved file within the Notebook, so that the remainder of the experiment is appended to the current log.</p>
+</div>
+<div class="section" id="there-was-a-warning-after-a-recording-completed">
+<h4>There was a warning after a recording completed<a class="headerlink" href="#there-was-a-warning-after-a-recording-completed" title="Permalink to this headline">¶</a></h4>
+<p>Occasionally, transfer from the FPGA fails to keep up insidiously and does not return a timeout error, resulting in data blocks to become out of sync. The missing chunks of data will in general leave the dataset impossible to use, hence the warning.</p>
+<p>It is recommended to record the data again, possibly after changing some of the acquisition parameters, or verifying that the PC is not busy with other tasks, sources of potential interrupts.</p>
+</div>
+<div class="section" id="data-saving-is-stuck">
+<h4>Data saving is stuck<a class="headerlink" href="#data-saving-is-stuck" title="Permalink to this headline">¶</a></h4>
+<p>When all recordings are complete but data saving seems to take an inordinate amount of time, check the data saving status by hovering over the status LED at the bottom of the main window and check the context Help window. If the last listed files is stuck at 0/n images, then most likely a FIFO overflow occurred and the FPGA is in an unrecoverable mode. Abort all savings tasks (if needed also first abort recording) and follow the instructions in the previous paragraph.</p>
+</div>
+<div class="section" id="images-are-all-black">
+<h4>Images are all black<a class="headerlink" href="#images-are-all-black" title="Permalink to this headline">¶</a></h4>
+<p>Verify that the SwissSPAD power supplies are turned on.</p>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="versionhistory.html" class="btn btn-neutral float-right" title="Version History" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="windows.html" class="btn btn-neutral float-left" title="Windows" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Regents of the University of California.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
