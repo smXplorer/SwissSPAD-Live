@@ -4,7 +4,7 @@ Acknowledgments
 Contributions
 +++++++++++++
 
-The author acknowledges the contribution of Dr. Arin Ulku (AQUA laboratory at EPFL) in the form of the SwissSPAD 2 firmware versions used in this software, as well as the original MATLAB code from which the core of SwissSPAD Live is inspired.
+The author acknowledges the contribution of Dr. Arin Ulku from the `Aqua Lab <https://www.epfl.ch/labs/aqua/>`_ (Prof. Edoardo Charbon) at EPFL, in the form of the SwissSPAD 2 firmware versions used in this software, as well as the original MATLAB code from which the core of SwissSPAD Live is inspired.
 
 The software uses code from the OpenG toolkit and from the HDF5 bindings for LabVIEW by Martijn Jasperse.
 
