@@ -85,9 +85,9 @@ To verify that the installation proceeded correctly, connect SwissSPAD2's USB 3 
 Repository Installation
 -----------------------
 
-The source repository is located at:
+	The source repository is located at:
 
-`<https://smXplorer@bitbucket.org/smXplorer/ss2-live-distribution>`_
+`<https://bitbucket.org/smXplorer/ss2-live-distribution>`_
 
 You can either clone the repository (so that you are informed of any updates and easily can try them out) or simply download the entire repository (~7 MB zipped, ~40 MB expanded) and expand it in the folder of your choice.
 
@@ -98,7 +98,7 @@ You can either clone the repository (so that you are informed of any updates and
 Opening SwissSPAD2 Live.vi
 --------------------------
 
-When first opening SwissSPAD Live.vi (make sure this is done using LabVIEW 2019 SP1 64 bit or above), LabVIEW will most likely be looking for VIs. It should be rather straightforward to guide it to the correct directory. If not, create an Issue using the tool provided in the repository (look for 'Issues' on the left hand side menu on the repository main page).
+When first opening SwissSPAD2 Live.vi (make sure this is done using LabVIEW 2019 SP1 64 bit or above), LabVIEW will most likely be looking for VIs. It should be rather straightforward to guide it to the correct directory. If not, create an Issue using the tool provided in the repository (look for 'Issues' on the left hand side menu on the repository main page).
 
 Run the VI.
 
