@@ -14,7 +14,7 @@ This software allows data acquisition, visualization and saving with the SwissSP
 
 * Online Manual
 
-An online manual (including a PDF version) can be found at [https://swissspad-live-distribution.readthedocs.io/(https://swissspad-live-distribution.readthedocs.io/)
+An online manual (including a PDF version) can be found at [https://swissspad-live-distribution.readthedocs.io/](https://swissspad-live-distribution.readthedocs.io/)
 
 ### How do I get set up? ###
 
