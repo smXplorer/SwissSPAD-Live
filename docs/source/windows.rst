@@ -58,9 +58,11 @@ FPGA
 
 The FPGA tab is used to specify which bitfile to upload to the FPGA (and therefore which task the detector can subsequently  perform).
 
-There are typically two types of available bitfile for each FPGA: an ``intensity`` bitfile and a standard one. The former ignores all gate settings (see next tab description), keeping the gate open during the whole 1-bit frame integration time, and is typically used for live mode imaging (e.g. for focus adjustment).
+There are typically two types of available bitfile for each FPGA: an ``intensity`` bitfile and a "gated" one. The former ignores all gate settings (see next tab description), keeping the gate open during the whole 1-bit frame integration time, and is typically used for live mode imaging (e.g. for focus adjustment).
 
 The latter is used for time-gated data acquisition. It can of course also be used in live mode, but in that case, the gate position is fixed to the starting value defined in the :ref:`Acquisition Parameters <acquisition-parameters-tab>` tab.
+
+Check the ``Auto Reset FPGA`` checkbox to let the software automatically reset the FPGA during acquisition in case of time out, and repeat the failed recording.
 
 .. _acquisition-parameters-tab:
 
@@ -103,11 +105,17 @@ The File Information tab is used to define the file path, start index, etc. and 
 
 - ``# Datasets in Series`` (default: 1) specifies the number of times the preset acquisition is repeated, one file being saved after each acquisition, its index starting at the current ``File Index`` value + 1 and being incremented by 1 for each new file.
 
+- ``Delay between Datasets`` (default: 0 s) can be used to add a pause after each dataset acquisition.
+
+- ``Add Underscore Prefix`` (default: false) can be used to easily identify files which have been identifed as comprising data that was scrambled during transfer from FPGA.
+
 - ``File Folder`` specifies which folder the files are saved into. Use the Browse button (3 dots) to the right to select the target folder.
 
 - ``File  Name`` represents the root file name, to which ``_n.hdf5`` will be added, where ``n`` is the value of ``File Index``, displayed as a 4-digit number (zero-justified).
 
-- ``Compression``: if checked, each time-gate image stored in the final HDF5 file is compressed using the zlib compression algorith (level 9). Compression adds to the data saving duration, but can reduce the final file size several times, depending on the gate image complexity.
+- ``Compression``: if checked, each time-gate image stored in the final HDF5 file is compressed using the zlib compression algorithm.
+
+- ``Compression Level`` (0 - 9, default: 9): Compression adds to the data saving duration, but can reduce the final file size severalfold, depending on the gate image complexity. In general, file saving starts becoming slower than data acquisition for compression level 7 and above, while the additional file size reduction is minimal.
 
 - ``Author``, ``Sample``: non-mandatory fields used to document the file.
 

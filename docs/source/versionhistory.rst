@@ -1,6 +1,26 @@
 Version History
 ===============
 
+v 0.5 (2021-07-22)
+------------------
+- Features:
+
+    + Added Sync Period, MAC Address and Windows username to HDF5 header >> version 0.5 of SwissSPAD 2 HDF5 File Format
+	
+    + Added option to add underscore to scrambled dataset file names
+
+    + Added option to insert delay between series datasets
+
+    + Added automatic FPGA Reset Attempt Flag in Settings
+	
+	+ Added PCB1 vs PCB2 check for scrambling test implementation (to be improved)
+	
+    + Implemented Compression Level Option
+	
+- Bug Fixes:
+
+   + Fixed some typos
+
 v 0.4 (2021-04-06)
 ------------------
 - Features:
