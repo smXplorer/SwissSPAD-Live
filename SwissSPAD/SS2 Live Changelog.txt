@@ -1,3 +1,44 @@
+2021-07-22 (XM)
+- v0.5 release
+
+2021-07-21 (XM)
+- Separated FPGA download from Data decode tasks
+- Implemented Compression Level Option
+
+2021-07-02 (XM)
+- Fixed missing Reset FPGA flag acknowledgment
+- Finished debugging auto-reset FPGA option
+ 
+2021-07-01 (XM)
+- Added PCB1 vs PCB2 check for scrambling test implementation (to be improved)
+- Tried to include FPGA reset in series acquisition: to be debugged
+
+2021-06-30 (XM)
+- Fixed typo in tab
+
+2021-06-22 (XM)
+- Reverted to version 2.14.0.143 of h5labview for standalone application build issue
+
+2021-06-19 (XM)
+- Added automatic FPGA Reset Attempt Flag in Settings
+
+2021-05-29 (XM)
+- Changed internal representation of scrambling flag (0: no error, 1: error)
+
+2021-05-28 (XM)
+- Added option to add underscore to scrambled dataset file names
+- Added option to insert delay between series datasets
+
+2021-04-29 (XM)
+- Added Update SwissSPAD Live Documentation.vi
+
+2021-04-27 (XM)
+- Added Sync Period, MAC Address and Windows username to HDF5 header >> version 0.5
+
+2021-04-14 (XM)
+- Added missing libFrontPanel-chsarp.dll to the distribution
+- released v 0.4.1 of the distribution
+
 2021-04-06 (XM)
 - Fixed a bug in data scrambling test
 - v0.3.4
