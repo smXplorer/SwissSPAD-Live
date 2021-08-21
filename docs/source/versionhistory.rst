@@ -1,6 +1,14 @@
 Version History
 ===============
 
+v0.5.2 (2021-08-20)
+-------------------
+- Bug Fixes:
+
+	+ Option to add an underscore addition to the file name includes cases where the number of gates saved is not equal to the target
+	
+	+ Actual number of saved gates reported in the Notebook now is correct
+	
 v 0.5 (2021-07-22)
 ------------------
 - Features:

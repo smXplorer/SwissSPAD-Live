@@ -107,7 +107,7 @@ The File Information tab is used to define the file path, start index, etc. and 
 
 - ``Delay between Datasets`` (default: 0 s) can be used to add a pause after each dataset acquisition.
 
-- ``Add Underscore Prefix`` (default: false) can be used to easily identify files which have been identifed as comprising data that was scrambled during transfer from FPGA.
+- ``Add Underscore Prefix`` (default: false) can be used to easily identify files which have been identifed as comprising data that was scrambled during transfer from FPGA, or comprising less gates than requested.
 
 - ``File Folder`` specifies which folder the files are saved into. Use the Browse button (3 dots) to the right to select the target folder.
 
