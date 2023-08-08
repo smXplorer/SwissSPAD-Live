@@ -1,0 +1,498 @@
+-2023-08-07 (XM)
+- Fixed update of Acquisition Parameters outputs in Settings Window
+- Fixed handling of missing Hot Pixel Mask Image
+- Fixed Histogram Cursor control of Image Contrast
+
+2023-07-25 (XM)
+- Corrected SS3 gate characteristics computation after  clarification from Arin. Essentially, up to know, the exposure per 1-bit frame was underestimated by 20 us.
+
+2023-07-23 (XM)
+- Added option to Save Sum of All Gates Preview Images
+
+2023-07-22 (XM)
+- Added Option to Check for Hot Pixel Location Mismatch
+
+2023-07-20 (XM)
+- Fixed Initialization error related to Mask Image File
+- Added Verbose Settings & Verbose Saving options in UI Settings
+
+2023-07-16 (XM)
+- Simplified Hot Pixel Removal Code
+- Added UI Settings option to use the Image Display Options for the Histogram (i.e. use Hot Pixel Removal)
+- Fixed "Use Histogram Cursors for Contrast"?
+
+2023-07-12 (XM)
+- Added support for hot pixel mask image
+
+2023-03-13 (XM)
+- Fixed file version string typo
+
+2023-03-12 (XM)
+- cosmetic BD edits
+- Added "Microlens" checkbox in DAQ Parameters
+- Added "Gate Image Integration" and replaced "Exposure/Gate" by "Gate Image Exposure"
+- SwissSPAD Live HDF5 File version 0.7
+
+2022-12-09 (XM)
+- Removed unnecessary close/open .NET reference steps
+
+2022-12-07 (XM)
+- Added option to select which half array is displayed in Live Display
+- Refactored Settings Storage
+- Updated okFP library
+
+2022-12-06 (XM)
+- Test of communication with two FPGAs simultaneously
+
+2022-12-05 (XM)
+- Template for dual FPGA support
+- Added support for initialization of two FPGAs
+
+2022-12-04 (XM)
+- Updated Send Message to Notebook connections
+
+2022-10-25 (XM)
+- Added no VDM version for testing by Michael Wayne (EPFL)
+
+2022-09-02 (XM)
+- Fixed Removal of Hot Pixels interpretation of the percentile value as "High Value Percentile"
+- Added Cursors to Histogram and option to use them to adjust image contrast
+
+2022-06-18 (XM)
+- Changed split bar layout
+
+2022-05-25 (XM)
+- Finished implementation of "Remove Outliers"
+
+2022-05-23 (XM)
+- Added Image Display Options in Settings->Image Parameters
+- Implemented "Remove Outliers" for Displayed Image (untested)
+
+2022-05-20 (XM)
+- Save Image Data as TIFF now opens file dialog in last used folder
+- Added UI template for background Subtraction
+
+2022-04-27 (XM)
+- Changed SS3 Gate Definition parameter from Duty Cycle to Gate Width
+- Changed "Use Duty Cycle" checkbox to "Gate Definition
+
+2022-04-13 (XM)
+- Fixed a typo in the "SwissSPAD Detector Information" group name.
+
+2022-04-04 (XM)
+- Updated Dc to Gate Parameter VI to version 2
+
+2022-04-02 (XM)
+- Updated DC to Gate Parameter VI
+
+2022-04-01 (XM)
+- Added "Use Ducty Cycle" checkbox to SS3 DAQ Parameters
+- Changed enabled/disabled status of Gate Definition Cluster
+
+2022-03-20 (XM)
+- Added extraction of FPGA clock base from bitfile file name
+
+2022-03-19 (XM)
+- Trying to fix missing INT gate transfer
+- Fixed 8-bit and 16-bit INT & G2 transfer
+
+2022-03-17 (XM)
+- cosmetic code (FP) edit
+
+2022-03-16 (XM)
+- checking firmware parameters after Michael Wayne's email answer
+- reverted to previous code
+
+2022-03-13 (XM)
+- Improved error handling upon FPGA timeout
+- Changed clone policy (shared vs preallocated)
+
+2022-03-12 (XM)
+- Added SS3 Gate Slippage Correction option
+
+2022-03-11 (XM)
+- Changed buffer size unit to "# 8-bit Gates". The best value appears to be 1.
+- Added Error Dialog in Notebook when loading of a rtf file fails
+
+2022-03-10 (XM)
+- Changed priority to normal for all VIs
+- Changed OKFP timeout to 0.1 s
+- Internal handling of errors
+
+2022-03-07 (XM)
+- Fixed bugs introduced previously in data decoding
+- Corrected for a 1 column shift of the two gate images
+- Trying different things to improve the success rate of 10-bit dataset recording (FPGA delay, buffer size)
+
+2022-03-03 (XM)
+- Trying to solve data scrambling problem with recorded datasets
+- Reverted to saving INT gate and Gate 2
+
+2022-03-02 (XM)
+- Upgraded to LabVIEW 2021 SP1
+
+2022-02-27 (XM)
+- Debugged Recording (single and series)
+- Modification of HDF5 File Format to support Gate Names (future suport for dual FPGA saving)
+
+2022-02-26 (XM)
+- Improved Settings Window initialization
+- Code refactoring
+- Found source of premature data saving interruption
+
+2022-02-25 (XM)
+- Added "Hardware" submenu for FPGA-related actions
+- Added "Connect to FPGA" menu item and FPGA connected LED
+- Prevents using Hardware related commands during acquisition
+- Fixed incorrect SS3 Image Size in HDF5 File
+- Converging on the source of data saving errors
+
+2022-02-24 (XM)
+- recording debugging cont'd
+
+2022-02-23 (XM)
+- Fixing some bugs in data decoding
+- started debugging recording
+
+2022-02-21 (XM)
+- Code for SS3 data recording
+- Implemented "Save Image Data as TIFF" right-click menu item
+
+2022-02-17 (XM)
+- Working on cleaning up data recording code
+
+2022-02-16 (XM)
+- Started implementing code for SS3 data recording
+- HDF5 header modification
+- SS3 Data passing & decoding requires refactoring the code
+
+2022-02-15 (XM)
+- Added "Connect" button and "Connected" LED in Settings>>FPGA
+- Code refactoring
+
+2022-02-14 (XM)
+- Added "Intensity Mode" option in Settings >> SS3 DAQ Parameters
+- Added "Image to Display" option in Settings >> Image Parameters (Gate 1, Gate 2, Gate 1 + Gate 2) 
+
+2022-02-12 (XM)
+- Fixed exposure time formula for SS2
+- Added gate shift directionality option
+- Implemented SS3 gate characteristics
+- First test of Live Mode (intensity bitfile)
+
+2022-02-11 (XM)
+- More VI prefix changes
+- Added FPGA S/N to Detector version database
+- Introduced bitfile version from bitfile content (was a user input)
+- Removed odd dependencies to AlliGator and Fit Models
+- Moving old VIs to deprecated folder
+
+2022-02-10 (XM)
+- Icon updates and prefix change
+
+2021-12-21 (XM)
+- v0.6
+
+2021-08-20 (XM)
+- Added underscore option for datasets missing gates
+- The number of gates saved printed in the Notebook should now be correct
+- v0.5.2
+
+2021-07-27 (XM)
+- official 0.5.1 release
+
+2021-07-22 (XM)
+- v0.5 release
+
+2021-07-21 (XM)
+- Separated FPGA download from Data decode tasks
+- Implemented Compression Level Option
+
+2021-07-02 (XM)
+- Fixed missing Reset FPGA flag acknowledgment
+- Finished debugging auto-reset FPGA option
+ 
+2021-07-01 (XM)
+- Added PCB1 vs PCB2 check for scrambling test implementation (to be improved)
+- Tried to include FPGA reset in series acquisition: to be debugged
+
+2021-06-30 (XM)
+- Fixed typo in tab
+
+2021-06-22 (XM)
+- Reverted to version 2.14.0.143 of h5labview for standalone application build issue
+
+2021-06-19 (XM)
+- Added automatic FPGA Reset Attempt Flag in Settings
+
+2021-05-29 (XM)
+- Changed internal representation of scrambling flag (0: no error, 1: error)
+
+2021-05-28 (XM)
+- Added option to add underscore to scrambled dataset file names
+- Added option to insert delay between series datasets
+
+2021-04-29 (XM)
+- Added Update SwissSPAD Live Documentation.vi
+
+2021-04-27 (XM)
+- Added Sync Period, MAC Address and Windows username to HDF5 header >> version 0.5
+
+2021-04-14 (XM)
+- Added missing libFrontPanel-chsarp.dll to the distribution
+- released v 0.4.1 of the distribution
+
+2021-04-06 (XM)
+- Fixed a bug in data scrambling test
+- v0.3.4
+- Open Notebook on startup, check for Notebook status on quit
+- Fixing "Abort All Saving Tasks" action
+- Added 'Reset FGPA' Help menu item
+- v0.4
+ 
+2021-04-05 (XM)
+- Moved data scrambling test to decoding in order to catch that before binning/cropping
+- Force release queues
+
+2021-04-04 (XM)
+- Fixed handling of Admin-protected Gate Definitions
+- Debugged Gate Definition UI
+- v0.3.3
+
+2021-04-03 (XM)
+- Added Notebook warning when data was scrambled during transfer
+
+2021-04-02 (XM)
+- Added deallocate memory flag in Save VI (no apparent effect)
+
+2021-04-01 (XM)
+- Added "Stop Data Recording" dialog before aborting saving tasks
+- Clear Saving in Progress indicator after aborting
+- Modified default configurations to have zero offset
+- Histogram binning now uses the dataset bitness to set the bin size
+- Added Help >> FPGA Status
+- Fixed missing saved gates if the number of gates is not a multiple of the buffer size
+- version 0.3.2
+
+2021-03-31 (XM)
+- version 0.3.1
+- Added Clear Internal Variables upon quitting
+- Set Busy Icon status to inactive
+
+2021-03-30 (XM)
+- Fixed repeated 'Tada' sound
+- Cosmetic changes to Front Panel objects
+- Clear internal variables when quitting
+- Version 0.3 of the distribution released
+
+2021-03-28 (XM)
+- Added bitfiles folder to project and build specification
+- Re-release as a new source distribution with folder hierarchy preserved
+
+2021-03-19 (XM)
+- project cleanup
+- check for existing file when saving Display image
+- changed minimum windows size so that the iamge is 512x256 pixel
+
+2021-03-08 (XM)
+- Added Image Context menu (Palette, Copy, Save, Zoom)
+
+2021-03-01 (XM)
+- upgraded Beep to System Sound
+
+2021-02-28 (XM)
+- Fixed (hopefully) problem with ghost saving task after FPGA timeout
+- Added Beep to End of Recording and End of Saving tasks
+
+2021-02-27 (XM)
+- Fixed Dataset Series Image Display
+- Added Image Binning Options and renamed Image Information to Image ROI Information
+- v 0.4 of the dataset file format
+- moved file back to SwissSPAD
+- fixed a couple of bugs
+
+2021-02-26 (XM)
+- debugging of cropping
+- debugging of buffer size
+- Added Compression option in File Information
+
+2021-02-25 (XM)
+- Added ROI change >> update Image Information in Settings
+- Added separate Buffer Size (# Gates) parameter in DAQ Settings to try and fight USB transfer failures
+- Fixed Image Information UI bug
+
+2021-02-24 (XM)
+- Added option to save only part of the image
+- Version 0.3.1 of the image file format adding this image information
+
+2021-02-13 (XM)
+- cosmetic edits
+- reverted to "Preallocated clone reentrant execution" for data saving tasks
+- added some timeout error indicator in Download Data
+- outputs a message to the Notebook when the recording task is complete
+- further error indicators
+- avoid reloading the bitfile if unchanged
+- terminates saving task if FPGA readout error
+- Added wait corresponding to gate image integration
+
+2021-02-12 (XM)
+- Code cleanup
+- Corrected a bug in the FPGA parameters for intensity
+- Corrected a different bug in the FPGA parameters for gating
+
+2021-02-11 (XM)
+- Changed buffer size to 8-bit gate image size
+- Fixed a problem with Live imaging with gated bitfile
+- Implemented granular data download
+- Minor cosmetic changes
+
+2021-02-10 (XM)
+- Changed to GetFileSize function
+- Cosmetic update to FPGA parameters
+
+2021-01-30 (XM)
+- Added Abort Saving Tasks shortcut menu to the blinking LED
+- Fixed a bug in end of file saving task
+- Fixed a bug in parameter passing to 2019 firmware
+- Added SS2 DAQ Parameters to Notebook output, which is now the Metadata as well
+- Added Timing information in FPGA download
+
+2021-01-29 (XM)
+- Added File Saving Task information
+- Added LED with corresponding tasks description in Context Help
+
+2021-01-28 (XM)
+- Started to add check on on-going file saving tasks
+- Corrected bug that did not allow a series of acquisition to complete
+
+2021-01-13 (XM)
+- removed Gate Shift data entry limitations
+
+2021-01-12 (XM)
+- corrected Start up message
+- check for existing files
+- changed Q name to avoid name collision when saving several files
+- added end of file saving message
+- changed priority/thread and reentrancy of some VIs
+
+2021-01-04 (XM)
+- Added separate case for live intensity mode
+
+2020-12-28 (XM)
+- Debugged live acq and recording with 05-07-2019 bitfile
+
+2020-12-27 (XM)
+- removed Accumulate option in File Settings
+- Implemented preliminary support for ss2_top_05_07_2019.bit bitfile
+
+2020-12-25 (XM)
+- Added "# Datasets in Series" and "Dataset ID in Series" information in HDF5 file when appropriate
+- Implemented parallel save architecture for multiple datasets
+- Fixed a few bugs
+
+2020-12-24 (XM)
+- Added File Series Number and Accumulate option in File Settings
+- Implemented Series Acquisition
+- Debugged. Had to add a wait before respawning the Data Saving Task
+
+2020-12-23 (XM)
+- VIs renamed
+- Starting to implement July 2019 firmware
+- Removed a series of bogus dependencies
+- First Source Distribution Release
+
+2020-12-21 (XM)
+- Fixed a bug on 10-bit data recording
+- Added valid gate definition check before Live Acquisition & Recording
+
+2020-12-20 (XM)
+- Added Admin Mode to prevent Gate Configuration Settings modification
+- Storage of Gate Configurations as VI Tag
+- Fixed Display Image accumulation during recording
+- Corrected a bug that was never resetting image when recording 10-bit data
+
+2020-12-19 (XM)
+- Adding Gate Image Type to the File Description
+
+2020-12-19 (XM)
+- Added HDF5 data compression
+- Added more Gate Characteristics ouput in Settings Wndow (and Notebook)
+
+2020-12-15 (XM)
+- Fixed .NET constructor error by calling it only once per session
+
+2020-12-14 (XM)
+- Debugged Saved Gate Configurations
+- Change Histogram Q to [[SGL]]
+
+2020-12-13 (XM)
+- Added GUI to handle Saved Gate Configurations: TBD
+
+2020-12-12 (XM)
+- Compute Gate Width from FPGA parameters
+- adjusts FPGA parameters to bifile version
+- Debugged data recording
+- Added Notebook output for recording
+
+2020-12-07 (XM)
+- Added Bitfile Version string to Settings
+- Data to HDF5 first code
+
+2020-12-06 (XM)
+- Added template for HDF5 data saving
+- HDF5 Header
+
+2020-12-02 (XM)
+- Added some code for HDF5 File Creation (TBC)
+
+2020-12-01 (XM)
+- Code update
+- Reduced number of subVIs
+- Debugged Recording (but problem with Histogram)
+
+2020-11-30 (XM)
+- Refactored Live Acquisition
+- Added Record button and template for muliple image acquisition
+- Implemented Multiple Datasets Recording
+- Minor code fixes
+- Started debugging Recording
+
+2020-11-29 (XM)
+- Update of Settings on Initialization
+- Added DAQ Parameters to Settings
+- Message update during acquisition
+- Minor cosmetic updates
+
+2020-11-28 (XM)
+- Added # Histogram Bins to Settings
+- Fixed single element queue behavior
+- Refactoring
+- Added verbose error messages
+- Added Save-Load Settings
+- Added Notebook entry at startup and close
+- Fixed a few bugs
+
+2020-11-27 (XM)
+- Settings, About, Notebook & Histogram Windows
+
+2020-11-15 (XM)
+- Conversion of SS2 DAQ parameters to FPGA parameters
+
+2019-07-16 (XM)
+- Added "Application Instance Close" event case
+
+2019-07-14 (XM)
+- Added menu: Quit and Select bitfile...
+- Handling of FPGA communication shutdown
+- Made compatible with standalone release
+
+2019-07-01 (XM)
+- Fixed a bug in parameter initialization
+- Minor code clean up
+- Debugging iImage passing from .NET
+
+2019-06-30 (XM)
+- Completed code, tested unsuccessfully on SS2...
+
+2019-06-29 (XM)
+- Started implementing SS2 Live
