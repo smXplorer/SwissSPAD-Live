@@ -1,4 +1,8 @@
--2023-08-07 (XM)
+2023-08-09 (XM)
+- Minor cosmetic changes to Settings window
+- Partial doc update
+
+2023-08-07 (XM)
 - Fixed update of Acquisition Parameters outputs in Settings Window
 - Fixed handling of missing Hot Pixel Mask Image
 - Fixed Histogram Cursor control of Image Contrast
@@ -47,6 +51,7 @@
 2022-12-05 (XM)
 - Template for dual FPGA support
 - Added support for initialization of two FPGAs
+- v 0.7
 
 2022-12-04 (XM)
 - Updated Send Message to Notebook connections
@@ -74,7 +79,7 @@
 
 2022-04-27 (XM)
 - Changed SS3 Gate Definition parameter from Duty Cycle to Gate Width
-- Changed "Use Duty Cycle" checkbox to "Gate Definition
+- Changed "Use Duty Cycle" checkbox to "Gate Definition"
 
 2022-04-13 (XM)
 - Fixed a typo in the "SwissSPAD Detector Information" group name.

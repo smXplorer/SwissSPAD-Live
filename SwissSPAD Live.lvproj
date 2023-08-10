@@ -180,6 +180,9 @@
 				<Item Name="Flag Array to Error Message.vi" Type="VI" URL="../../Error/Flag Array to Error Message.vi"/>
 				<Item Name="SwissSPAD Live_Filter Error.vi" Type="VI" URL="../SwissSPAD Live_Filter Error.vi"/>
 			</Item>
+			<Item Name="Distribution" Type="Folder">
+				<Item Name="SwissSPAD Live Distribution Pre-Build Action.vi" Type="VI" URL="../SwissSPAD Live Distribution Pre-Build Action.vi"/>
+			</Item>
 		</Item>
 		<Item Name="bitfiles" Type="Folder" URL="../bitfiles">
 			<Property Name="NI.DISK" Type="Bool">true</Property>
@@ -754,16 +757,16 @@
 			<Item Name="Variant to Formatted String.vi" Type="VI" URL="../../Variant/Variant to Formatted String.vi"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build">
-			<Item Name="SS2 Live Distribution" Type="Source Distribution">
+			<Item Name="SwissSPAD Live Distribution" Type="Source Distribution">
 				<Property Name="Bld_buildCacheID" Type="Str">{4F16547C-C2CE-472E-B5FC-0D86DA5C7716}</Property>
-				<Property Name="Bld_buildSpecDescription" Type="Str">SS2 Live Distribution with folder hierarchy preserved</Property>
-				<Property Name="Bld_buildSpecName" Type="Str">SS2 Live Distribution</Property>
+				<Property Name="Bld_buildSpecDescription" Type="Str">SwissSPAD Live Distribution with folder hierarchy preserved</Property>
+				<Property Name="Bld_buildSpecName" Type="Str">SwissSPAD Live Distribution</Property>
 				<Property Name="Bld_excludedDirectory[0]" Type="Path">vi.lib</Property>
 				<Property Name="Bld_excludedDirectory[0].pathType" Type="Str">relativeToAppDir</Property>
 				<Property Name="Bld_excludedDirectory[1]" Type="Path">resource/objmgr</Property>
 				<Property Name="Bld_excludedDirectory[1].pathType" Type="Str">relativeToAppDir</Property>
-				<Property Name="Bld_excludedDirectory[2]" Type="Path">/C/ProgramData/National Instruments/InstCache/19.0</Property>
-				<Property Name="Bld_excludedDirectory[3]" Type="Path">/C/Users/13108/Documents/LabVIEW Data/2019(64-bit)/ExtraVILib</Property>
+				<Property Name="Bld_excludedDirectory[2]" Type="Path">/C/ProgramData/National Instruments/InstCache/21.0</Property>
+				<Property Name="Bld_excludedDirectory[3]" Type="Path">/C/Users/13108/Documents/LabVIEW Data/2021(64-bit)/ExtraVILib</Property>
 				<Property Name="Bld_excludedDirectory[4]" Type="Path">instr.lib</Property>
 				<Property Name="Bld_excludedDirectory[4].pathType" Type="Str">relativeToAppDir</Property>
 				<Property Name="Bld_excludedDirectory[5]" Type="Path">user.lib</Property>
@@ -771,22 +774,22 @@
 				<Property Name="Bld_excludedDirectoryCount" Type="Int">6</Property>
 				<Property Name="Bld_excludeLibraryItems" Type="Bool">true</Property>
 				<Property Name="Bld_excludePolymorphicVIs" Type="Bool">true</Property>
-				<Property Name="Bld_localDestDir" Type="Path">../builds/SS2 Live Distribution</Property>
+				<Property Name="Bld_localDestDir" Type="Path">../builds/SwissSPAD Live Distribution</Property>
 				<Property Name="Bld_localDestDirType" Type="Str">relativeToCommon</Property>
 				<Property Name="Bld_modifyLibraryFile" Type="Bool">true</Property>
+				<Property Name="Bld_preActionVIID" Type="Ref">/My Computer/VIs/Distribution/SwissSPAD Live Distribution Pre-Build Action.vi</Property>
 				<Property Name="Bld_previewCacheID" Type="Str">{71D9E3FF-87EF-47CC-A235-7D9A142E2EAF}</Property>
 				<Property Name="Bld_removeVIObj" Type="Int">1</Property>
 				<Property Name="Bld_userLogFile" Type="Path">../builds/SS2 Live Distribution/SS2 Live_SS2 Live Distribution (Structured)_log.txt</Property>
 				<Property Name="Bld_userLogFile.pathType" Type="Str">relativeToCommon</Property>
-				<Property Name="Bld_version.minor" Type="Int">5</Property>
-				<Property Name="Bld_version.patch" Type="Int">2</Property>
+				<Property Name="Bld_version.minor" Type="Int">7</Property>
 				<Property Name="Destination[0].destName" Type="Str">Destination Directory</Property>
-				<Property Name="Destination[0].path" Type="Path">../builds/SS2 Live Distribution</Property>
+				<Property Name="Destination[0].path" Type="Path">../builds/SwissSPAD Live Distribution</Property>
 				<Property Name="Destination[0].preserveHierarchy" Type="Bool">true</Property>
 				<Property Name="Destination[1].destName" Type="Str">Support Directory</Property>
-				<Property Name="Destination[1].path" Type="Path">../builds/SS2 Live Distribution/data</Property>
+				<Property Name="Destination[1].path" Type="Path">../builds/SwissSPAD Live Distribution/data</Property>
 				<Property Name="DestinationCount" Type="Int">2</Property>
-				<Property Name="Source[0].itemID" Type="Str">{5DACD6AC-BB04-42A6-94C9-6AADF1D7BE76}</Property>
+				<Property Name="Source[0].itemID" Type="Str">{0FF8A768-54D8-4F36-98F7-56BE53A4997F}</Property>
 				<Property Name="Source[0].type" Type="Str">Container</Property>
 				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
 				<Property Name="Source[1].itemID" Type="Ref">/My Computer/SwissSPAD Live.vi</Property>
@@ -808,28 +811,23 @@
 				<Property Name="Source[4].destinationIndex" Type="Int">0</Property>
 				<Property Name="Source[4].itemID" Type="Ref">/My Computer/Documentation</Property>
 				<Property Name="Source[4].type" Type="Str">Container</Property>
+				<Property Name="Source[5].Container.applyInclusion" Type="Bool">true</Property>
+				<Property Name="Source[5].Container.depDestIndex" Type="Int">0</Property>
 				<Property Name="Source[5].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[5].itemID" Type="Ref"></Property>
+				<Property Name="Source[5].itemID" Type="Ref">/My Computer/docs</Property>
 				<Property Name="Source[5].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[5].type" Type="Str">Container</Property>
+				<Property Name="Source[6].Container.applyInclusion" Type="Bool">true</Property>
+				<Property Name="Source[6].Container.depDestIndex" Type="Int">0</Property>
 				<Property Name="Source[6].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[6].itemID" Type="Ref"></Property>
+				<Property Name="Source[6].itemID" Type="Ref">/My Computer/Licenses</Property>
 				<Property Name="Source[6].sourceInclusion" Type="Str">Include</Property>
-				<Property Name="Source[7].Container.applyInclusion" Type="Bool">true</Property>
-				<Property Name="Source[7].Container.depDestIndex" Type="Int">0</Property>
+				<Property Name="Source[6].type" Type="Str">Container</Property>
 				<Property Name="Source[7].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[7].itemID" Type="Ref">/My Computer/docs</Property>
+				<Property Name="Source[7].itemID" Type="Ref">/My Computer/SwissSPAD Live VIs Collection.vi</Property>
 				<Property Name="Source[7].sourceInclusion" Type="Str">Include</Property>
-				<Property Name="Source[7].type" Type="Str">Container</Property>
-				<Property Name="Source[8].Container.applyInclusion" Type="Bool">true</Property>
-				<Property Name="Source[8].Container.depDestIndex" Type="Int">0</Property>
-				<Property Name="Source[8].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[8].itemID" Type="Ref">/My Computer/Licenses</Property>
-				<Property Name="Source[8].sourceInclusion" Type="Str">Include</Property>
-				<Property Name="Source[8].type" Type="Str">Container</Property>
-				<Property Name="Source[9].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[9].itemID" Type="Ref"></Property>
-				<Property Name="Source[9].sourceInclusion" Type="Str">Include</Property>
-				<Property Name="SourceCount" Type="Int">10</Property>
+				<Property Name="Source[7].type" Type="Str">VI</Property>
+				<Property Name="SourceCount" Type="Int">8</Property>
 			</Item>
 			<Item Name="SwissSPAD Live (no VDM)" Type="EXE">
 				<Property Name="App_copyErrors" Type="Bool">true</Property>
