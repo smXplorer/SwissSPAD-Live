@@ -182,6 +182,7 @@
 			</Item>
 			<Item Name="Distribution" Type="Folder">
 				<Item Name="SwissSPAD Live Distribution Pre-Build Action.vi" Type="VI" URL="../SwissSPAD Live Distribution Pre-Build Action.vi"/>
+				<Item Name="SwissSPAD Live Distribution Post-Build Action.vi" Type="VI" URL="../SwissSPAD Live Distribution Post-Build Action.vi"/>
 			</Item>
 		</Item>
 		<Item Name="bitfiles" Type="Folder" URL="../bitfiles">
@@ -777,6 +778,7 @@
 				<Property Name="Bld_localDestDir" Type="Path">../builds/SwissSPAD Live Distribution</Property>
 				<Property Name="Bld_localDestDirType" Type="Str">relativeToCommon</Property>
 				<Property Name="Bld_modifyLibraryFile" Type="Bool">true</Property>
+				<Property Name="Bld_postActionVIID" Type="Ref">/My Computer/VIs/Distribution/SwissSPAD Live Distribution Post-Build Action.vi</Property>
 				<Property Name="Bld_preActionVIID" Type="Ref">/My Computer/VIs/Distribution/SwissSPAD Live Distribution Pre-Build Action.vi</Property>
 				<Property Name="Bld_previewCacheID" Type="Str">{71D9E3FF-87EF-47CC-A235-7D9A142E2EAF}</Property>
 				<Property Name="Bld_removeVIObj" Type="Int">1</Property>
@@ -789,7 +791,7 @@
 				<Property Name="Destination[1].destName" Type="Str">Support Directory</Property>
 				<Property Name="Destination[1].path" Type="Path">../builds/SwissSPAD Live Distribution/data</Property>
 				<Property Name="DestinationCount" Type="Int">2</Property>
-				<Property Name="Source[0].itemID" Type="Str">{0FF8A768-54D8-4F36-98F7-56BE53A4997F}</Property>
+				<Property Name="Source[0].itemID" Type="Str">{FB01B753-BDBD-4421-B508-E14C443C5847}</Property>
 				<Property Name="Source[0].type" Type="Str">Container</Property>
 				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
 				<Property Name="Source[1].itemID" Type="Ref">/My Computer/SwissSPAD Live.vi</Property>
@@ -811,11 +813,10 @@
 				<Property Name="Source[4].destinationIndex" Type="Int">0</Property>
 				<Property Name="Source[4].itemID" Type="Ref">/My Computer/Documentation</Property>
 				<Property Name="Source[4].type" Type="Str">Container</Property>
-				<Property Name="Source[5].Container.applyInclusion" Type="Bool">true</Property>
+				<Property Name="Source[5].Container.applyDestination" Type="Bool">true</Property>
+				<Property Name="Source[5].Container.applyProperties" Type="Bool">true</Property>
 				<Property Name="Source[5].Container.depDestIndex" Type="Int">0</Property>
-				<Property Name="Source[5].destinationIndex" Type="Int">0</Property>
 				<Property Name="Source[5].itemID" Type="Ref">/My Computer/docs</Property>
-				<Property Name="Source[5].sourceInclusion" Type="Str">Include</Property>
 				<Property Name="Source[5].type" Type="Str">Container</Property>
 				<Property Name="Source[6].Container.applyInclusion" Type="Bool">true</Property>
 				<Property Name="Source[6].Container.depDestIndex" Type="Int">0</Property>

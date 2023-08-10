@@ -12,6 +12,7 @@
 #
 import os
 import sys
+import pylons_sphinx_themes
 # sys.path.insert(0, os.path.abspath('.'))
 
 on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
@@ -20,19 +21,20 @@ if not on_rtd:
     import sphinx_rtd_theme
     html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
     #html_theme_path = ["_themes", ]
-    html_theme = 'sphinx_rtd_theme'
-
+    #html_theme = 'sphinx_rtd_theme'
+    html_theme = 'nature'
+    
 # -- Project information -----------------------------------------------------
 
 project = 'SwissSPAD Live'
-copyright = '2021, Regents of the University of California'
+copyright = '2021-2023, Regents of the University of California'
 author = 'X. Michalet'
 
 # The short X.Y version.
-version = '0.4'
+version = '0.7'
 
 # The full version, including alpha/beta/rc tags
-release = '0.4'
+release = '0.7'
 
 
 # -- General configuration ---------------------------------------------------
