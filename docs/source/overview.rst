@@ -20,7 +20,7 @@ SwissSPAD Live is based on MATLAB scripts calling different versions of the FPGA
 
 + experiment documentation and logging
 
-Datasets are saved in the AlliGator HDF5 file format documented `here <https://sites.google.com/a/g.ucla.edu/alligator/alligator-technical-reference/alligator-hdf5-file-format>`_.
+Datasets are saved in the AlliGator HDF5 file format documented in :ref:`alligator-hdf5-file-format`.
 
 This manual provides an overview of the different windows constituting the GUI
 and of the corresponding actions they help perform.

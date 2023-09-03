@@ -1,6 +1,12 @@
 Installation
 ============
 
+.. raw:: html
+
+    <style> .red {color:red} </style>
+
+.. role:: red
+
 **Important Note: This software package runs exclusively on Windows 64 bits 
 (version 7 and up).**
 
@@ -131,12 +137,12 @@ You can either clone the repository (so that you are informed of any updates and
 easily can try them out), fork it (if you plan on modifying it) or simply 
 download the entire repository and expand it in the folder of your choice.
 
-*Warning 1*: It is possible that the two DLL's normally present in the Opal 
-Kelly >> C# Wrapper folder are missing. In that case, download them individually 
+*Warning 1*: :red:`It is possible that the two DLL's normally present in the Opal 
+Kelly >> C# Wrapper folder are missing.` In that case, download them individually 
 from the repository and save them in the C# Wrapper folder.
 
-*Warning 2*: By default, the DLL's may end up in a "locked" state, which will 
-prevent their usage by SwissSPAD Live. Before running LabVIEW and SwissSPAD Live
+*Warning 2*: :red:`By default, the DLL's may end up in a "locked" state, which will 
+prevent their usage by SwissSPAD Live.` Before running LabVIEW and SwissSPAD Live
 , make sure they are "unlocked". To do so, navigate to the C# Wrapper folder 
 with Windows Explorer and right-click on the dll files, choosing "Properties". 
 As explained in `this article <https://knowledge.ni.com/KnowledgeArticleDetails?id=kA00Z0000019UnoSAE&l=en-US>`_,

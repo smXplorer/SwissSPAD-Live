@@ -12,7 +12,7 @@ Main Window
 
 The main window displays the latest live or recorded image in the top part.
 
-.. image:: image/SwissSPAD-Live-Main-Window.PNG
+.. image:: images/SwissSPAD-Live-Main-Window.PNG
 
 The top menu bar gives access to the following functions:
 
@@ -73,7 +73,7 @@ pull-down selector: :ref:`FPGA <FPGA-tab>`, :ref:`Acquisition Parameters
 FPGA
 ^^^^
  
-.. image:: image/SwissSPAD-Live-Settings-Window-FPGA.PNG
+.. image:: images/SwissSPAD-Live-Settings-Window-FPGA.PNG
 
 The FPGA panel is used to specify which bitfile to upload to the FPGA (and 
 therefore which task the detector can subsequently  perform) and establish 
@@ -137,27 +137,27 @@ the number of gates and their exposure, etc. Parameter values displayed on a
 gray background are indicators (they cannot be modified by the user) and are 
 updated automatically when the user modifies other parameters.
 
-The Acquisition Parameters panel looks slightly differently for SS2 and SS3.
+The Acquisition Parameters panel looks slightly differently for SS2 and SS3. 
 Below is the typical aspect when using SS2:
 
-.. image:: image/SS2-Live-Settings-Window-Acquisition-Parameters.PNG
+.. image:: images/SS2-Live-Settings-Window-Acquisition-Parameters.PNG
 
 Note in particular the pull-down ``Preset Configuration`` list allowing 
 selection of one of the 7 predefined gate definitions.
 
 The following shows the panel's aspect when using SS3:
 
-.. image:: image/SS3-Live-Settings-Window-Acquisition-Parameters.PNG
+.. image:: images/SS3-Live-Settings-Window-Acquisition-Parameters.PNG
 
-Please check the :ref:`User Guide section <setting-acquisition-parameters>` for
- a detailed description of the different parameters.
+Please check the :ref:`User Guide section <setting-acquisition-parameters>` for 
+a detailed description of the different parameters.
 
 .. _image-parameters-tab:
 
 Image Parameters
 ^^^^^^^^^^^^^^^^
 
-.. image:: image/SwissSPAD-Live-Settings-Window-Image-Parameters.PNG
+.. image:: images/SwissSPAD-Live-Settings-Window-Image-Parameters.PNG
 
 The Image Parameters panel is used to specify whether or not:
 
@@ -191,7 +191,7 @@ Keep in mind that once cropped or binned, the original data cannot be recovered.
 File Information
 ^^^^^^^^^^^^^^^^
 
-.. image:: image/SwissSPAD-Live-Settings-Window-File-Information.PNG
+.. image:: images/SwissSPAD-Live-Settings-Window-File-Information.PNG
 
 The File Information panel is used to define the file path, start index, etc. 
 and additional information about the recorded data file(s), as detailed next.
@@ -243,7 +243,7 @@ and additional information about the recorded data file(s), as detailed next.
 UI Parameters
 ^^^^^^^^^^^^^
 
-.. image:: image/SwissSPAD-Live-Settings-Window-UI-Parameters.PNG
+.. image:: images/SwissSPAD-Live-Settings-Window-UI-Parameters.PNG
 
 The UI Parameters panel is used to set:
 
@@ -252,23 +252,24 @@ The UI Parameters panel is used to set:
 - ``Verbose Saving``: turn on/off sending additional information related to data
   transfer when saving datasets.
 
--  ``Histogram Bin Number``: number of bins used for the image histogram.
-   Note that ``Histogram Bin Number`` defines the number of bins into which the
-   full range of the gate image pixels is divided. For instance, to have bins of 
-   width 1, used ``256`` for a 8-bit image, and ``1020`` for a 10-bit image.
+- Image Histogram
 
-- ``Use Image Display Options``: check this box to use the ``Image Display 
-  Options`` defined on the *Image Parameters* panel to build the histogram. In 
-  particular, if the ``Remove Hot Pixels`` option is selected, the histogram 
-  will be calculated using the modified image, allowing a cleaner view of the
-  useful distribution of pixel intensities in the dataset.
+  + ``Use Image Display Options``: check this box to use the ``Image Display 
+    Options`` defined on the *Image Parameters* panel to build the histogram. In 
+    particular, if the ``Remove Hot Pixels`` option is selected, the histogram 
+    will be calculated using the modified image, allowing a cleaner view of the
+    useful distribution of pixel intensities in the dataset. This will however 
+    increase processing time.
+
+   + ``Histogram Bin Size``: bin size used for the image histogram. The default is
+     1 and should generally be appropriate for most images.
 
 .. _notebook-window:
 
 Notebook
 --------
 
-.. image:: image/SwissSPAD-Live-Notebook-Window.PNG
+.. image:: images/SwissSPAD-Live-Notebook-Window.PNG
 
 The Notebook is a Rich Text Box object in which most actions performed by the 
 software are recorded. It is accessed via the ``Windows >> Notebook`` menu item 
@@ -285,17 +286,25 @@ be found in the C:\Users\username\AppData\Local\Temp folder (which is hidden by
 default) under the name ~SwissSPAD Live Notebook n.rtf where n is a random 
 number. The time of last backup is indicated at the bottom of the Notebook.
 
+Note: :red:`It is strongly recommended to save the Not
+ebook's content after each 
+data acquisition session for reproducibility purposes.`
+
 .. _histogram-window:
 
 Histogram Window
 ----------------
 
-.. image:: image/SwissSPAD-Live-Histogram-Window.PNG
+.. image:: images/SwissSPAD-Live-Histogram-Window.PNG
 
 The Histogram Window shows an histogram of the displayed image's pixel values. 
 It is opened with the ``Windows >> Histogram`` menu item (shortcut: ``Ctrl+M``).
-The number of bins of the histogram is defined in the Settings >> :ref:`UI 
-Parameters <UI-parameters-tab>` panel.
+The bin size is defined in the Settings >> :ref:`UI Parameters <UI-parameters-tab>` 
+panel.
+
+If the ``Use Histogram Cursors for Contrast`` checkbox has been checked in the 
+Settings >> :ref:`image-parameters-tab` panel, the cursors will be used to 
+define the minimum and maximum values displayed using the selected color palette.
 
 The Histogram window is resizable.
 
@@ -304,7 +313,7 @@ The Histogram window is resizable.
 Context Help Window
 -------------------
 
-.. image:: image/SS2-Live-Help-Window.PNG
+.. image:: images/SS2-Live-Help-Window.PNG
 
 The Context Help window is a floating window and shows information (when 
 available) about the object the mouse is over. It is shown or hidden using the 
@@ -319,7 +328,7 @@ when datasets are being saved in the background.
 About Window
 ------------
 
-.. image:: image/SwissSPAD-Live-About-Window.PNG
+.. image:: images/SwissSPAD-Live-About-Window.PNG
 
 The About Window is a dialog window (it prevents other windows from being 
 interacted with). Click anywhere in it to close it.

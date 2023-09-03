@@ -1,5 +1,12 @@
 .. _user-guide:
 
+
+.. raw:: html
+
+    <style> .red {color:red} </style>
+
+.. role:: red
+
 User Guide
 ==========
 .. _live-mode:
@@ -20,22 +27,22 @@ panel of the ``Settings`` window are ignored and replaced by the following value
 
 - # Sets: 1
 
-If the bitfile is an 'intensity' one (SS2), or in all cases when using SS3, all 
-gate definition parameters (``Gate Offset``, ``gs_psincdec_n`` and 
-``gs_no_shift_adj``) are ignored.
+If the bitfile is an 'intensity' one (SS2), all gate definition parameters 
+(``Gate Offset``, ``gs_psincdec_n`` and ``gs_no_shift_adj``) are ignored.
 
 Details
 ^^^^^^^
 
 To start a Live Acquisition, simply click the ``Start`` button (bottom right).
 
-During Live Acquisition, a 'busy' icon is displayed next to the Record button.
+During Live Acquisition, a 'busy' icon is displayed next to the ``Record`` 
+button (the busy icon is an animated GID image emulating a set of rotating dots).
 
 To stop a Live Acquisition, click on the same button (now labeled ``Stop``).
 
 While you will be warned to do so, remember to stop a Live Acquisition before 
 starting a Recording (or quitting).
-	
+
 .. _recording-mode:
 
 Recording Mode
@@ -47,15 +54,18 @@ Overview
 To start recording, click on the ``Record`` button (to the right of the 
 ``Start`` button).
 
-During recording, a 'busy' icon is displayed next to the Record button.
+During recording, a 'busy' icon is displayed next to the ``Record`` button.
 
 In addition, a blinking ``Saving in progress`` LED is turned on, indicating that
 data is being saved in the background. Hovering over this LED with the mouse 
-will display information on the on-going saving task(s) in the Context Help 
-window: ``File Name: current/total Images, File Size in MB``. Checking this 
-information is useful to monitor the progress of data saving, but also to detect
-a potential FPGA communication problem, e.g. if one of the files is stuck at 0 
-image.
+will display information on the on-going saving task(s) in the 
+:ref:`context-help-window` window:
+
+``File Name: current/total Images, File Size in MB``.
+
+Checking this  information is useful to monitor the progress of data saving, 
+but also to detect a potential FPGA communication problem, e.g. if one of the 
+files is stuck at 0 image.
 
 The acquisition can be aborted by clicking on the same button, now labeled 
 ``Abort``.
@@ -73,15 +83,21 @@ window), each set comprising a user-specified number ``g`` of gates (parameter
 ``# Gates per Set``).
 
 The ``G = S x g`` gates are shifted with respect to one another by ``Gate Shift``
-increments of ``dt = 1/(1 GHz)/56`` (*i.e.* 17.8571 ps) if the SYNC repetition
-rate is 20 or 40 MHz, and ``dt = 1/(960 MHz)/56`` (*i.e.* 18.601 ps) if it is 80
-MHz. The first gate starts at an offset specified by ``Gate Offset`` (in dt 
+increments of ``dt = 1/(1 GHz)/56`` (*i.e.* 17.8571 ps) if the bitfile 
+corresponds to a SYNC repetition rate is 20 or 40 MHz, and 
+``dt = 1/(960 MHz)/56`` (*i.e.* 18.601 ps) if it corresponds to a 80 MHz rate.
+The first gate starts at an offset specified by ``Gate Offset`` (in dt 
 units). The complete series of gates thus covers a span of ``G x dt`` reported 
 as ``Gate Images Span`` in the :ref:`Acquisition Parameters 
 <acquisition-parameters-tab>` panel of the Settings window.
 
+Note: :red:`In general, it is recommended to set those parameters such that 
+``Gate Images Span`` is as close as possible (but smaller) to the ``Laser Period`` 
+(or in the case where ``SYNC period`` is larger than ``Laser Period``, as close 
+to the ``SYNC Period`` as possible).`
+
 The data stored on the FPGA is continuously transfered to the PC, decoded and 
-saved in parallel, which can result in the data acquisition being over well 
+saved in parallel, which can result in the data acquisition being completed well 
 before the data is fully saved. This is why three different completion messages 
 are printed in the Notebook:
 
@@ -115,13 +131,19 @@ parameters can be modified:
   is therefore 1,020. Data acquisition takes 4 times longer than for an 8-bit 
   image.
 
-- ``# Exposure Sequences``: this parameter specifies during how many laser 
-  periods the gate is opened and closed for each 1-bit gate image. Adjust this 
+- ``# Exposure Sequences``: this parameter specifies during how many multiple 
+  of 400 ns the gate is opened and closed for each 1-bit gate image (a gate is 
+  opened and closed every SYNC Period). Adjust this 
   parameter by checking the :ref:`Histogram Window <histogram-window>` and 
   trying to make sure the largest value stays away from the maximum (either 255 
   or 1,020) to avoid saturation. Large values (> 100) also may result in readout
   artifacts and should be avoided with SS2 (no such problem seems to occur with 
   SS3).
+  
+Note: :red:`For SS3, the data readout uses a rolling-shutter mode, and two 
+channels need to be transferred, resulting in a minimum integration time of 
+20.05 us. The # Exposure Sequences are added to this minimum integration 
+time.`
 
 - ``Laser Period``: this information is saved in the file for the user's 
   convenience but has no impact on acquisition. It is useful for data analysis 
@@ -130,7 +152,7 @@ parameters can be modified:
 
 - ``SYNC Period``: the SYNC signal is the signal provided to SS2 or SS3 to 
   define the gate opening location in time. It may be different from the laser 
-  period. Rhis information is saved in the file for the user's convenience but 
+  period. This information is saved in the file for the user's convenience but 
   has no impact on acquisition. It is useful for data analysis and is used by 
   AlliGator, therefore it is recommended to provide an accurate value.
 
@@ -180,10 +202,8 @@ parameters in 'Admin' mode, turned on in the :ref:`About Window <about-window>`.
 Opening HDF5 Files
 ------------------
 
-The HDF5 format in which series of gate images are saved is described on the 
-AlliGator software website:
-
-https://sites.google.com/a/g.ucla.edu/alligator/alligator-technical-reference/alligator-hdf5-file-format
+The HDF5 format in which series of gate images are saved is described in 
+:ref:`alligator-hdf5-file-format`.
 
 AlliGator can be used to open and analyze HDF5 files saved by SwissSPAD Live.
 
@@ -192,15 +212,15 @@ AlliGator can be used to open and analyze HDF5 files saved by SwissSPAD Live.
 Troubleshooting
 ---------------
 
-#.. _troubleshooting-manual:
-#
-#Manual issues
-#^^^^^^^^^^^^^
-#
-#If you find issues with this manual (typo, error, obscurity, etc.) or have 
-#suggestions for its improvement, please create an issue on the ``SS2 Live 
-#Manual`` Bibucket repository at 
-#`<https://bitbucket.org/smXplorer/ss2-live-manual/issues?status=new&status=open>`_.
+.. _troubleshooting-manual:
+
+Manual issues
+^^^^^^^^^^^^^
+
+If you find issues with this manual (typo, error, obscurity, etc.) or have 
+suggestions for its improvement, please create an issue on the ``SwissSPAD Live`` 
+GitHub repository at 
+`<https://github.com/smXplorer/SwissSPAD-Live>`_.
 
 .. _troubleshooting-software:
 
@@ -219,10 +239,11 @@ Common problems
 The following is a list of common issues that may be encountered and possible 
 workarounds.
 
-**Important Note**: don't forget to open the Notebook! Oftentimes, there is a lot 
-of information printed there (including error messages in red if ``Verbose 
-Error`` has been selected in the Settings window >> UI Settings panel), which 
-might sometimes help diagnose the source of the problem.
+:red:`Important Note: don't forget to open the Notebook!` Oftentimes, there is 
+a lot of useful information printed there (including error 
+messages in red if ``Verbose Error`` has been selected in the Settings window >> 
+:ref:`UI-parameters-tab`), which might sometimes help diagnose the source of 
+the problem. It is recommended to have this option turned on.
 
 Live acquisition or Data recording does not work anymore
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -239,7 +260,7 @@ Live acquisition or Data recording does not work anymore
 3. Finally, occasionally the preceding steps may still not be sufficient to 
    re-establish communication with the FPGA, necessitating a reboot of the FPGA.
    To do this, first stop SwissSPAD Live, shutdown the unit following the 
-   shutdown procedure), including the FPGA and restart operation.
+   shutdown procedure, including the FPGA, and restart operation.
    
 Note that in order to not lose the information stored in the Notebook, it is a 
 recommended to save it before (or after) quitting SwissSPAD Live and *before* 
@@ -279,3 +300,12 @@ Images are all black
 """"""""""""""""""""
 
 Verify that the SwissSPAD regulated power supply is turned on.
+
+Gate images are all similar
+"""""""""""""""""""""""""""
+
+There is no variation in the signal despite the settings requesting a series of
+gates shifted incrementally: check that there is valid SYNC signal provided to 
+the detector. It is worth checking that the signal is a valid TTL signal using 
+a fast oscilloscope (bad cables are a thing). The nominal duty cycle of the TTL 
+signal is 50% but slight departures are acceptable.

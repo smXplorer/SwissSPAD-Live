@@ -10,6 +10,7 @@ SwissSPAD Live Documentation
    installation
    windows
    guide
+   alligator-hdf5-file-format
    versionhistory
    support
    acknowledgments
