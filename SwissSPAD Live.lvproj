@@ -53,6 +53,7 @@
 				<Item Name="SwissSPAD Live_Format SS3 8-bit Gate Pair Data.vi" Type="VI" URL="../SwissSPAD Live_Format SS3 8-bit Gate Pair Data.vi"/>
 				<Item Name="SwissSPAD Live_Get Actual Image Size.vi" Type="VI" URL="../SwissSPAD Live_Get Actual Image Size.vi"/>
 				<Item Name="SwissSPAD Live_Get Detector PCB Version.vi" Type="VI" URL="../SwissSPAD Live_Get Detector PCB Version.vi"/>
+				<Item Name="SwissSPAD Live_Get Device Info.vi" Type="VI" URL="../SwissSPAD Live_Get Device Info.vi"/>
 				<Item Name="SwissSPAD Live_Get FPGA Data Q.vi" Type="VI" URL="../SwissSPAD Live_Get FPGA Data Q.vi"/>
 				<Item Name="SwissSPAD Live_Get FPGA Status String.vi" Type="VI" URL="../SwissSPAD Live_Get FPGA Status String.vi"/>
 				<Item Name="SwissSPAD Live_Get Single Image Set.vi" Type="VI" URL="../SwissSPAD Live_Get Single Image Set.vi"/>
@@ -93,6 +94,7 @@
 				<Item Name="SwissSPAD Live_Histo Q.vi" Type="VI" URL="../SwissSPAD Live_Histo Q.vi"/>
 				<Item Name="Histogram (G) v2.vim" Type="VI" URL="../../Calc/Histogram (G) v2.vim"/>
 				<Item Name="SwissSPAD Live_Get-Set Histogram Cursor Locations.vi" Type="VI" URL="../SwissSPAD Live_Get-Set Histogram Cursor Locations.vi"/>
+				<Item Name="SwisssSPAD Live_Histogram Dynanic Event.vi" Type="VI" URL="../SwisssSPAD Live_Histogram Dynanic Event.vi"/>
 			</Item>
 			<Item Name="Internal &amp; Global Variables" Type="Folder">
 				<Item Name="SwissSPAD Live_Internal Variables.ctl" Type="VI" URL="../SwissSPAD Live_Internal Variables.ctl"/>
@@ -137,6 +139,7 @@
 				<Item Name="SwissSPAD Live_Settings Window.vi" Type="VI" URL="../SwissSPAD Live_Settings Window.vi"/>
 				<Item Name="SwissSPAD Live_Special Controls Update.vi" Type="VI" URL="../SwissSPAD Live_Special Controls Update.vi"/>
 				<Item Name="SwissSPAD Live_SS3 DAQ Parameters.ctl" Type="VI" URL="../SwissSPAD Live_SS3 DAQ Parameters.ctl"/>
+				<Item Name="SwissSPAD Live_SS3 Displayed Image v2.ctl" Type="VI" URL="../SwissSPAD Live_SS3 Displayed Image v2.ctl"/>
 				<Item Name="SwissSPAD Live_SS3 Displayed Image.ctl" Type="VI" URL="../SwissSPAD Live_SS3 Displayed Image.ctl"/>
 				<Item Name="SwissSPAD Live_SS3 Duty Cycle to Gate Parameters.vi" Type="VI" URL="../SwissSPAD Live_SS3 Duty Cycle to Gate Parameters.vi"/>
 				<Item Name="SwissSPAD Live_SS3 Gate Definition.ctl" Type="VI" URL="../SwissSPAD Live_SS3 Gate Definition.ctl"/>
@@ -183,6 +186,7 @@
 			<Item Name="Distribution" Type="Folder">
 				<Item Name="SwissSPAD Live Distribution Pre-Build Action.vi" Type="VI" URL="../SwissSPAD Live Distribution Pre-Build Action.vi"/>
 				<Item Name="SwissSPAD Live Distribution Post-Build Action.vi" Type="VI" URL="../SwissSPAD Live Distribution Post-Build Action.vi"/>
+				<Item Name="SwissSPAD Live_Post-Build Steps.ctl" Type="VI" URL="../SwissSPAD Live_Post-Build Steps.ctl"/>
 			</Item>
 		</Item>
 		<Item Name="bitfiles" Type="Folder" URL="../bitfiles">

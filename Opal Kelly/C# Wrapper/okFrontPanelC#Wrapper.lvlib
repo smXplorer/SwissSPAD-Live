@@ -46,4 +46,5 @@
 	<Item Name="Utils" Type="Folder">
 		<Item Name="okFP Convert Error Code.vi" Type="VI" URL="../okFP Convert Error Code.vi"/>
 	</Item>
+	<Item Name="okCFrontPanel Dispose.vi" Type="VI" URL="../okCFrontPanel Dispose.vi"/>
 </Library>

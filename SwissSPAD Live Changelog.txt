@@ -1,3 +1,21 @@
+2023-09-03 (XM)
+- Code cleanup
+
+2023-09-02 (XM)
+- Fixed missing "Close Settings Window" event when quitting SewissSPAD Live
+- Enabled Gated Mode during Live Mode
+- Added Dynamic Event in Histogram Window to close it when SwissSPAD Live quits
+- Changed Displayed Image list to G2 Gate, INT Gate and INT - G2 for clarity
+- Added missing Settings initialization
+- Added missing "Bottom Half" and "Top Half" flags in SwissSPAD Detector Information HDF5 group
+- Fixed bug in HDF5 header saving which would overwrite Bottom Half properties with Top Half properties
+
+- v0.7.1
+
+2023-08-31 (XM)
+- Reverted some of the Settings Window changes
+- Fixed bug in default selected bottom and top half selection
+
 2023-08-09 (XM)
 - Minor cosmetic changes to Settings window
 - Partial doc update
