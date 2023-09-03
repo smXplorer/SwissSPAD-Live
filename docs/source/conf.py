@@ -31,10 +31,10 @@ copyright = '2021-2023, Regents of the University of California'
 author = 'X. Michalet'
 
 # The short X.Y version.
-version = '0.7'
+version = '0.7.1'
 
 # The full version, including alpha/beta/rc tags
-release = '0.7'
+release = '0.7.1'
 
 
 # -- General configuration ---------------------------------------------------
@@ -57,3 +57,7 @@ templates_path = ['_templates']
 # This pattern also affects html_static_path and html_extra_path.
 exclude_patterns = ['_build']
 
+# Build PDF & ePub
+formats:
+  - epub
+  - pdf
