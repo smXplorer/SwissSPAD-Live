@@ -48,7 +48,7 @@ sphinx:
 
     - pdf
 
-#    - epub
+    - epub
 
 
 # Optional but recommended, declare the Python requirements required
