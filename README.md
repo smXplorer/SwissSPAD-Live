@@ -10,7 +10,7 @@ This software allows data acquisition, visualization and saving with the SwissSP
 
 * Version:
 
-0.4
+0.7.2
 
 * Online Manual
 
