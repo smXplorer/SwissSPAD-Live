@@ -1,6 +1,18 @@
 Version History
 ===============
 
+v 0.7.2 (2023-09-04)
+--------------------
+
+- Bug Fixes
+
+    + Fixed bug on first run if hot pixel removal is selected
+    
+- New Feature
+
+    + grayed out "SS3 Hot Pixel Mismatch Detection" option in Settings >> File 
+      Information
+
 v 0.7.1 (2023-09-02)
 --------------------
 - Bug Fixes

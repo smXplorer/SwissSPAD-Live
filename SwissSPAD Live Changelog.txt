@@ -1,5 +1,12 @@
+2023-09-04 (XM)
+- Fixed bug on first run if hot pixel removal is selected
+- grayed out "SS3 Hot Pixel Mismatch Detection"
+- v0.7.2 distribution release
+
 2023-09-03 (XM)
 - Code cleanup
+- Documentation edit and release
+- Separation of code distribution and documentation release
 
 2023-09-02 (XM)
 - Fixed missing "Close Settings Window" event when quitting SewissSPAD Live

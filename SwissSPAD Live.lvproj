@@ -185,7 +185,7 @@
 			</Item>
 			<Item Name="Distribution" Type="Folder">
 				<Item Name="SwissSPAD Live Distribution Pre-Build Action.vi" Type="VI" URL="../SwissSPAD Live Distribution Pre-Build Action.vi"/>
-				<Item Name="SwissSPAD Live Distribution Post-Build Action.vi" Type="VI" URL="../SwissSPAD Live Distribution Post-Build Action.vi"/>
+				<Item Name="Release SwissSPAD Live Documentation.vi" Type="VI" URL="../Release SwissSPAD Live Documentation.vi"/>
 				<Item Name="SwissSPAD Live_Post-Build Steps.ctl" Type="VI" URL="../SwissSPAD Live_Post-Build Steps.ctl"/>
 			</Item>
 		</Item>
@@ -670,6 +670,7 @@
 			<Item Name="Concatenate String Array.vi" Type="VI" URL="../../Strings/Concatenate String Array.vi"/>
 			<Item Name="Conditional Add 1 [I32].vi" Type="VI" URL="../../Calc/Conditional Add 1.llb/Conditional Add 1 [I32].vi"/>
 			<Item Name="Convert Cluster INI String.vi" Type="VI" URL="../../Strings/Convert Cluster INI String.vi"/>
+			<Item Name="Convert Error to Warning.vi" Type="VI" URL="../../Error/Convert Error to Warning.vi"/>
 			<Item Name="Copy Image Data to Clipboard.vi" Type="VI" URL="../../Pictures/Copy Image Data to Clipboard.vi"/>
 			<Item Name="Create 256 Values Palette.vi" Type="VI" URL="../../Palette/Create 256 Values Palette.vi"/>
 			<Item Name="Create File on Error.vi" Type="VI" URL="../../Files/Create File on Error.vi"/>
@@ -782,20 +783,20 @@
 				<Property Name="Bld_localDestDir" Type="Path">../builds/SwissSPAD Live Distribution</Property>
 				<Property Name="Bld_localDestDirType" Type="Str">relativeToCommon</Property>
 				<Property Name="Bld_modifyLibraryFile" Type="Bool">true</Property>
-				<Property Name="Bld_postActionVIID" Type="Ref">/My Computer/VIs/Distribution/SwissSPAD Live Distribution Post-Build Action.vi</Property>
 				<Property Name="Bld_preActionVIID" Type="Ref">/My Computer/VIs/Distribution/SwissSPAD Live Distribution Pre-Build Action.vi</Property>
 				<Property Name="Bld_previewCacheID" Type="Str">{71D9E3FF-87EF-47CC-A235-7D9A142E2EAF}</Property>
 				<Property Name="Bld_removeVIObj" Type="Int">1</Property>
-				<Property Name="Bld_userLogFile" Type="Path">../builds/SS2 Live Distribution/SS2 Live_SS2 Live Distribution (Structured)_log.txt</Property>
+				<Property Name="Bld_userLogFile" Type="Path">../builds/SwissSPAD Live Distribution/SwissSPAD Live Distribution Build Log.txt</Property>
 				<Property Name="Bld_userLogFile.pathType" Type="Str">relativeToCommon</Property>
 				<Property Name="Bld_version.minor" Type="Int">7</Property>
+				<Property Name="Bld_version.patch" Type="Int">1</Property>
 				<Property Name="Destination[0].destName" Type="Str">Destination Directory</Property>
 				<Property Name="Destination[0].path" Type="Path">../builds/SwissSPAD Live Distribution</Property>
 				<Property Name="Destination[0].preserveHierarchy" Type="Bool">true</Property>
 				<Property Name="Destination[1].destName" Type="Str">Support Directory</Property>
 				<Property Name="Destination[1].path" Type="Path">../builds/SwissSPAD Live Distribution/data</Property>
 				<Property Name="DestinationCount" Type="Int">2</Property>
-				<Property Name="Source[0].itemID" Type="Str">{FB01B753-BDBD-4421-B508-E14C443C5847}</Property>
+				<Property Name="Source[0].itemID" Type="Str">{A66C41FB-9A99-415C-B335-E06677439B35}</Property>
 				<Property Name="Source[0].type" Type="Str">Container</Property>
 				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
 				<Property Name="Source[1].itemID" Type="Ref">/My Computer/SwissSPAD Live.vi</Property>
